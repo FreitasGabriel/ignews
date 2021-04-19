@@ -31,8 +31,6 @@ export async function saveSubscription(
         price_id: subscription.items.data[0].price.id
     }
 
-    console.log('fez a inscrição no fauna', subscriptionData)
-
     if (createAction) {
         await fauna.query(
             q.Create(
